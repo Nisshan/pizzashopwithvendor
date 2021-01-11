@@ -22,6 +22,7 @@ class User extends Authenticatable implements MustVerifyEmail
         'name',
         'email',
         'password',
+        'role'
     ];
 
     /**
@@ -49,14 +50,10 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->attributes['name'] = ucwords($name);
     }
 
-//    public function setPasswordAttribute($password)
-//    {
-//        return $this->attributes['password'] = bcrypt($password);
-//    }
 
     public function roleName()
     {
-        $roles = ['User', 'Admin', 'Staff'];
+        $roles = ['User', 'Admin', 'Staff', 'Vendor'];
         return $roles[$this->role];
     }
 
@@ -76,6 +73,11 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->role == 2;
     }
 
+    public function isVendor()
+    {
+        return $this->role == 3;
+    }
+
     public function orders()
     {
         return $this->hasMany(Order::class);
@@ -84,5 +86,10 @@ class User extends Authenticatable implements MustVerifyEmail
     public function coupon()
     {
         return $this->hasOne(UserCoupon::class);
+    }
+
+    public function products()
+    {
+        return $this->hasMany(Product::class)->with('orders');
     }
 }

@@ -72,9 +72,9 @@ class OrdersDatatable extends DataTable
     {
         if (auth()->user()->roleName() != 'User') {
             return $model->with('user:name,id')->newQuery();
-        } else {
-            return $model->where('user_id', auth()->id())->newQuery();
         }
+        return $model->where('user_id', auth()->id())->newQuery();
+
     }
 
     /**

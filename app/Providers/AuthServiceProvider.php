@@ -28,5 +28,9 @@ class AuthServiceProvider extends ServiceProvider
         Gate::define('manage_menu', function () {
             return auth()->user()->isAdmin();
         });
+
+        Gate::define('shared_menu', function () {
+            return in_array(auth()->user()->roleName(), ['Admin', 'Vendor']);
+        });
     }
 }

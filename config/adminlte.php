@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>Pizza </b>shop',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -254,7 +254,7 @@ return [
         [
             'text' => 'Categories',
             'icon' => 'fas fa-tags',
-            'can' => 'manage_menu',
+            'can' => 'shared_menu',
             'submenu' => [
                 [
                     'text' => 'Manage',
@@ -270,6 +270,7 @@ return [
                     'text' => 'Menu Builder',
                     'icon' => 'fa fa-list',
                     'url' => 'admin/menu',
+                    'can' => 'manage_menu',
                 ],
             ]
 
@@ -277,19 +278,19 @@ return [
         [
             'text' => 'Product',
             'icon' => 'fas fa-tags',
-            'can' => 'manage_menu',
+            'can' => 'shared_menu',
             'submenu' => [
                 [
                     'text' => 'Manage',
                     'url' => 'admin/products',
                     'icon' => 'fas fa-cogs',
-                    'can' => 'manage_menu'
+                    'can' => 'shared_menu'
                 ],
                 [
                     'text' => 'Create',
                     'url' => 'admin/products/create',
                     'icon' => 'fa fa-plus-circle',
-                    'can' => 'manage_menu'
+                    'can' => 'shared_menu'
 
                 ]
             ],
@@ -298,22 +299,26 @@ return [
         [
             'text' => 'Orders',
             'icon' => 'fas fa-tags',
+            'can' => 'manage_menu',
             'submenu' => [
                 [
                     'text' => 'Manage',
                     'url' => 'admin/orders',
                     'icon' => 'fas fa-cogs',
+                    'can' => 'manage_menu'
                 ],
             ],
         ],
         [
             'text' => 'Coupons',
             'icon' => 'fas fa-tags',
+            'can' => 'manage_menu',
             'submenu' => [
                 [
                     'text' => 'Manage',
                     'url' => 'admin/coupons',
                     'icon' => 'fas fa-cogs',
+                    'can' => 'manage_menu',
 
                 ],
                 [
@@ -331,11 +336,13 @@ return [
         [
             'text' => 'Delivery',
             'icon' => 'fas fa-tags',
+            'can' => 'manage_menu',
             'submenu' => [
                 [
                     'text' => 'Manage',
                     'url' => 'admin/deliveries',
                     'icon' => 'fas fa-cogs',
+                    'can' => 'manage_menu',
 
                 ],
                 [

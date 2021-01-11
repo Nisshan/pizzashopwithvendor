@@ -19,14 +19,15 @@ class CategoriesDatatable extends DataTable
                 $view = "";
                 $view = view('shared.buttons.view')
                     ->with(['route' => route('categories.show', ['category' => $query->id])])->render();
-
-                $edit = view('shared.buttons.edit')
-                    ->with(['route' => route('categories.edit', ['category' => $query->id])])->render();
-                $view .= $edit;
+                if (auth()->user()->isAdmin()) {
+                    $edit = view('shared.buttons.edit')
+                        ->with(['route' => route('categories.edit', ['category' => $query->id])])->render();
+                    $view .= $edit;
 
                     $delete = view('shared.buttons.delete')
                         ->with(['route' => route('categories.destroy', ['category' => $query->id])])->render();
                     $view .= $delete;
+                }
                 return $view;
             })->editColumn('status', function ($query) {
                 return $query->status == true ? 'Active' : 'Inactive';

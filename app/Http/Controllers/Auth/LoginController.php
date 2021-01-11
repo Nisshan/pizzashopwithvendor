@@ -34,13 +34,20 @@ class LoginController extends Controller
     {
         $role = auth()->user()->roleName();
 
-        $redirectUrl = [
-            'Admin' => 'admin/dashboard',
-            'Staff' => 'admin/dashboard',
-            'User' => '/login'
-        ];
+//        $redirectUrl = [
+//            'Admin' => 'admin/dashboard',
+//            'Staff' => 'admin/dashboard',
+//            'User' => '/',
+//            'Vendor' => '/admin/dashboard'
+//        ];
 
-        return $redirectUrl[$role];
+        if ($role == 'User') {
+            return '/';
+        } else {
+            return '/admin/dashboard';
+        }
+
+//        return $redirectUrl[$role];
 
 
     }

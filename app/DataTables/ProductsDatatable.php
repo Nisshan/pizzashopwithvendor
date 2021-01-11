@@ -30,14 +30,17 @@ class ProductsDatatable extends DataTable
                 return $view;
             })->editColumn('status', function ($query) {
                 return $query->status == true ? 'Active' : 'Inactive';
-            })->editColumn('has_offer',function ($query){
-                return $query->has_offer =1 ? 'Yes' : 'No';
+            })->editColumn('has_offer', function ($query) {
+                return $query->has_offer = 1 ? 'Yes' : 'No';
             });
     }
 
 
     public function query(Product $model)
     {
+        if (auth()->user()->isVendor()) {
+            return $model->where('user_id', auth()->id())->get();
+        }
         return $model->newQuery();
     }
 

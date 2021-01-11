@@ -35,7 +35,7 @@ Auth::routes(['verify' => true]);
 
 Route::group(['prefix' => 'admin'], function () {
 
-    Route::group(['middleware' => ['auth', 'IsNotUser']], function () {
+    Route::group(['middleware' => ['auth', 'IsNotUser',  'verified']], function () {
         Route::get('/dashboard', DashboardController::class)->name('dashboard');
         Route::resource('users', UsersController::class);
         Route::resource('categories', CategoriesController::class);

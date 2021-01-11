@@ -83,6 +83,19 @@
             @endif
         </div>
 
+        <div class="input-group mb-3">
+            <label>
+                <input type="radio" name="role"
+                       value="0" checked
+                > &nbsp; User
+            </label> &nbsp; &nbsp; &nbsp;
+            <label>
+                <input type="radio" name="role"
+                       value="3"
+                >&nbsp; Vendor
+            </label> &nbsp;
+        </div>
+
         {{-- Register button --}}
         <button type="submit" class="btn btn-block {{ config('adminlte.classes_auth_btn', 'btn-flat btn-primary') }}">
             <span class="fas fa-user-plus"></span>
