@@ -8,11 +8,13 @@
             </h6>
         @endguest
 
-        @if(auth()->user()->roleName() != 'User')
+        @auth
+            @if(auth()->user()->roleName() != 'User')
                 <h6>
                     <a class="btn btn-primary" href="/admin/dashboard">Dashboard</a>
                 </h6>
-        @endif
+            @endif
+        @endauth
     </div>
 
     <figure class="m-0 col">
