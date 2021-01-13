@@ -6,18 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2221aaab-bda4-44dd-bf2d-d9360ce6157f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/DataTables/CategoriesDatatable.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/DataTables/CategoriesDatatable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/DataTables/OrdersDatatable.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/DataTables/OrdersDatatable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/DataTables/ProductsDatatable.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/DataTables/ProductsDatatable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/adminlte.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/adminlte.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/UserSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/UserSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/partials/topHeader.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/partials/topHeader.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/adminlte/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/adminlte/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -270,7 +258,8 @@
       <workItem from="1610251275329" duration="68000" />
       <workItem from="1610297464233" duration="4590000" />
       <workItem from="1610339104493" duration="607000" />
-      <workItem from="1610371262573" duration="965000" />
+      <workItem from="1610371262573" duration="1550000" />
+      <workItem from="1610424648662" duration="253000" />
     </task>
     <servers />
   </component>
