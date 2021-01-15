@@ -21,7 +21,7 @@ class DeliverySeeder extends Seeder
                 'delivery_type' => 'Pickup',
                 'slug' => 'pickup',
                 'chargeable' => 0,
-                'price' => '',
+                'price' => 0,
                 'status' => 1
             ],
             [

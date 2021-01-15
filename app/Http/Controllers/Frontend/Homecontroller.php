@@ -13,7 +13,7 @@ class Homecontroller extends Controller
     public function __invoke()
     {
         return view('frontend.home', [
-            'categories' => Category::with('products')->where('status', 1)->orderBy('position')->get()
+            'categories' => Category::has('products', '>' , 0)->with('products')->where('status', 1)->orderBy('position')->get()
         ]);
     }
 }
